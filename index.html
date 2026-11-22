@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insurance Claim Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Insurance Claim Processing Portal</h1>
+        <p>Manage your insurance claims easily</p>
+    </header>
+
+    <nav>
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('customer')">Customer</button>
+        <button onclick="showPage('policy')">Policy</button>
+        <button onclick="showPage('submit')">Submit Claim</button>
+        <button onclick="showPage('status')">Claim Status</button>
+        <button onclick="showPage('review')">Review</button>
+        <button onclick="showPage('history')">History</button>
+    </nav>
+
+    <!-- Home -->
+    <section id="home" class="page">
+        <h2>Dashboard</h2>
+
+        <div class="dashboard">
+            <div class="card">
+                <h3>Total Claims</h3>
+                <h2 id="total">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Pending Claims</h3>
+                <h2 id="pending">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Approved Claims</h3>
+                <h2 id="approved">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Rejected Claims</h3>
+                <h2 id="rejected">0</h2>
+            </div>
+        </div>
+
+        <h3>Welcome to Insurance Claim Portal</h3>
+        <p>Register customers, manage policies and process insurance claims.</p>
+    </section>
+
+    <!-- Customer Registration -->
+    <section id="customer" class="page">
+        <h2>Customer Registration</h2>
+
+        <form id="customerForm">
+            <input type="text" id="name" placeholder="Customer Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <input type="text" id="address" placeholder="Address" required>
+
+            <button type="submit">Register Customer</button>
+        </form>
+
+        <h3>Registered Customers</h3>
+        <div id="customerList"></div>
+    </section>
+
+    <!-- Policy -->
+    <section id="policy" class="page">
+        <h2>Policy Information</h2>
+
+        <form id="policyForm">
+            <select id="policyCustomer" required>
+                <option value="">Select Customer</option>
+            </select>
+
+            <select id="policyType" required>
+                <option value="">Select Policy Type</option>
+                <option>Health Insurance</option>
+                <option>Vehicle Insurance</option>
+                <option>Life Insurance</option>
+                <option>Home Insurance</option>
+            </select>
+
+            <input type="number" id="coverage" placeholder="Coverage Amount" min="1" required>
+            <input type="number" id="premium" placeholder="Premium Amount" min="1" required>
+
+            <button type="submit">Add Policy</button>
+        </form>
+
+        <h3>Available Policies</h3>
+        <div id="policyList"></div>
+    </section>
+
+    <!-- Submit Claim -->
+    <section id="submit" class="page">
+        <h2>Submit Insurance Claim</h2>
+
+        <form id="claimForm">
+
+            <select id="claimCustomer" required>
+                <option value="">Select Customer</option>
+            </select>
+
+            <select id="claimPolicy" required>
+                <option value="">Select Policy</option>
+            </select>
+
+            <select id="incident" required>
+                <option value="">Select Incident Type</option>
+                <option>Accident</option>
+                <option>Medical Emergency</option>
+                <option>Property Damage</option>
+                <option>Theft</option>
+            </select>
+
+            <input type="date" id="incidentDate" required>
+            <input type="number" id="amount" placeholder="Claim Amount" min="1" required>
+            <textarea id="description" placeholder="Describe the incident" required></textarea>
+
+            <h3>Document Checklist</h3>
+
+            <label><input type="checkbox" id="idProof"> Identity Proof</label><br>
+            <label><input type="checkbox" id="policyDoc"> Policy Document</label><br>
+            <label><input type="checkbox" id="report"> Incident Report</label><br>
+            <label><input type="checkbox" id="bill"> Supporting Bills</label><br><br>
+
+            <button type="submit">Submit Claim</button>
+
+        </form>
+    </section>
+
+    <!-- Claim Status -->
+    <section id="status" class="page">
+        <h2>Claim Status</h2>
+        <div id="claimList"></div>
+    </section>
+
+    <!-- Review -->
+    <section id="review" class="page">
+        <h2>Review Claims</h2>
+        <div id="reviewList"></div>
+    </section>
+
+    <!-- History -->
+    <section id="history" class="page">
+        <h2>Claim History</h2>
+        <div id="historyList"></div>
+    </section>
+
+    <footer>
+        <p>Insurance Claim Processing Portal | 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f7;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background-color: #244c73;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navigation */
+nav {
+    background-color: #193954;
+    padding: 15px;
+    text-align: center;
+}
+
+nav button {
+    background: white;
+    color: #193954;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Main sections */
+.page {
+    display: none;
+    background: white;
+    margin: 25px auto;
+    padding: 25px;
+    width: 85%;
+    border-radius: 8px;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Forms */
+input, select, textarea {
+    display: block;
+    width: 95%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 80px;
+}
+
+label input {
+    display: inline;
+    width: auto;
+}
+
+/* Buttons */
+form button {
+    background-color: #244c73;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* Dashboard */
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.card {
+    background: #e8eff6;
+    padding: 20px;
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.card h2 {
+    color: #244c73;
+}
+
+/* Lists */
+.item {
+    background: #f2f4f7;
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 5px;
+}
+
+.item button {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    color: white;
+    background: #244c73;
+    cursor: pointer;
+}
+
+.approve {
+    background: green !important;
+}
+
+.reject {
+    background: red !important;
+}
+
+/* Footer */
+footer {
+    background: #193954;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .page {
+        width: 88%;
+    }
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    nav button {
+        width: 90%;
+    }
+}
